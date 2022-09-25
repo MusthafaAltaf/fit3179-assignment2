@@ -10,26 +10,27 @@
       "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/countries_data.json",
       "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
     },
-      "transform": [
-        {
-          "lookup": "properties.NAME",
-          "from": {
-            "data": {
-              "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/2017_Co2_emission.csv"
-            },
-            "key": "Country",
-            "fields": ["CO2_Emission"]
-          }
+  
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/2017_Co2_emission.csv"
         },
-        {"calculate": "datum.CO2_Emission + 0.1", "as": "Emission (Tonnes)"}
-      ],
+        "key": "Country",
+        "fields": ["CO2_Emission"]
+      }
+    },
+    {"calculate": "datum.CO2_Emission + 0.1", "as": "Emission (Tonnes)"}
+  ],
     
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Emission (Tonnes)",
+      "field": "CO2_Emission",
       "type": "quantitative",
-      "scale": {"type": "log"}
+      "scale": {"type": "linear"}
     }
   }
 }
