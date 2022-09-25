@@ -3,7 +3,6 @@ Afghanistan,13014739.66
 Africa,1331739959
 Albania,6379207
 Algeria,150551376.6
-Americas (other),2398632318
 Andorra,520183.81
 Angola,35389928.27
 Anguilla,152045.24
@@ -11,7 +10,6 @@ Antigua and Barbuda,565296.4
 Argentina,204323434.8
 Armenia,5656391.74
 Aruba,927865.82
-Asia and Pacific (other),5071156099
 Australia,413092654.5
 Austria,69941755.62
 Azerbaijan,38209717.67
@@ -59,7 +57,6 @@ Denmark,34550121.09
 Djibouti,817008.26
 Dominica,144248.05
 Dominican Republic,21268776.28
-EU-28,3543683484
 Ecuador,38797288.26
 Egypt,218664377.5
 El Salvador,6992023.78
@@ -67,7 +64,6 @@ Equatorial Guinea,6714892.14
 Eritrea,793048.38
 Estonia,19809264.03
 Ethiopia,13396240.84
-Europe (other),2149072913
 Faeroe Islands,672936.2
 Fiji,1344386.66
 Finland,45956044.16
@@ -92,7 +88,6 @@ Hungary,50344705.47
 Iceland,3480027.14
 India,2466765373
 Indonesia,486843756.2
-International transport,1155307739
 Iran,672312342.6
 Iraq,194454630
 Ireland,39738353.97
@@ -127,7 +122,7 @@ Marshall Islands,120909.02
 Mauritania,2838703.34
 Mauritius,4279224.01
 Mexico,490294629.3
-Micronesia (country),177045.35
+Micronesia,177045.35
 Middle East,2671942768
 Moldova,5093588.86
 Mongolia,30390656.6
@@ -176,7 +171,7 @@ Serbia,45092772.9
 Seychelles,609048.19
 Sierra Leone,1392486.97
 Singapore,64765076.29
-Sint Maarten (Dutch part),779719.17
+Sint Maarten,779719.17
 Slovakia,35386216.27
 Slovenia,14609601.22
 Solomon Islands,237499.86
@@ -186,7 +181,6 @@ South Korea,616096686.8
 South Sudan,1840678.99
 Spain,281421987.1
 Sri Lanka,23138426.06
-Statistical differences,256677450.8
 Sudan,18205851.66
 Suriname,2053666.75
 Swaziland,1343750.9
@@ -217,7 +211,6 @@ Vanuatu,181363.53
 Venezuela,159567635.4
 Vietnam,198826548.8
 Wallis and Futuna Islands,25909.08
-World,36153261645
 Yemen,18965754.79
 Zambia,4746148.03
 Zimbabwe,10397718.47
