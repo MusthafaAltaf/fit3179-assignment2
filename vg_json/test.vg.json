@@ -1,36 +1,35 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Total amount of money won by country",
+  "title": "Global CO2 Emission in 2017",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
-  "data": {
-    "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/countries_data.json",
-    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
-  },
-  "transform": [
+  "data": 
     {
-      "lookup": "properties.NAME",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/Esport_Earnings_country_grouped.csv"
-        },
-        "key": "Top_Country",
-        "fields": ["Top_Country_Earnings"]
-      }
+      "name": "world",
+      "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/countries_data.json",
+      "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
     },
-    {"calculate": "datum.Top_Country_Earnings + 0.1", "as": "Earnings"}
-  ],
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/2017_Co2_emission.csv"
+            },
+            "key": "Country",
+            "fields": ["CO2_Emission"]
+          }
+        },
+        {"calculate": "datum.CO2_Emission + 0.1", "as": "Emission (Tonnes)"}
+      ],
+    
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Earnings",
+      "field": "Emission (Tonnes)",
       "type": "quantitative",
-      "scale": {
-        "type": "threshold",
-        "domain": [0, 10000, 100000, 1000000, 10000000, 100000000],
-        "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
-      }
+      "scale": {"type": "log"}
     }
   }
 }
