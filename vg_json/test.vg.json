@@ -13,7 +13,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/ESport_Earnings.csv"
+          "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/Esport_Earnings_country_grouped.csv"
         },
         "key": "Country",
         "fields": ["Active"]
