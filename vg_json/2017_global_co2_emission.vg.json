@@ -54,9 +54,8 @@
           "field": "CO2_Emission",
           "type": "quantitative",
           "scale": {
-            "type": "threshold",
-            "domain": [20000000, 2000000000, 3000000000, 4000000000, 50000000000, 6000000000, 7000000000, 8000000000],
-            "range": ["#fff7ec", "#fee8c8", "#fdd49e", "#fdbb84", "#fc8d59", "#ef6548", "#d7301f", "#b30000", "#7f0000"]
+            "type": "log",
+            "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]
           }
         },
         "tooltip": [
