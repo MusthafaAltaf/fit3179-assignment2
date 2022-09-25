@@ -8,18 +8,19 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
     <!-- <script src="vega_lite_vis.js"></script> -->
+    <link rel="stylesheet" href="./styles.css">
     <script type="text/javascript">
 
-      var vg_1 = "./vg_json/test.vg.json";
-      vegaEmbed("#bar_chart", vg_1).then(function(result) {
+      var vg_1 = "./vg_json/2017_global_co2_emission.vg.json";
+      vegaEmbed("#map", vg_1).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
 
     </script>
-    <title>First vega-lite graph</title>
+    <title>Global CO2 Emission</title>
   </head>
   <body>
-    <h1>First vega-lite graph</h1>
-    <div id="bar_chart"></div>
+    <h1>Global CO2 Emission 2017</h1>
+    <div id="map"></div>
   </body>
 </html>

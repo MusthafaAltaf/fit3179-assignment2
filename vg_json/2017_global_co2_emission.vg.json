@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Global CO2 Emission in 2017",
-  "width": 700,
-  "height": 400,
+  "width": 1200,
+  "height": 600,
   "projection": {"type": "equalEarth"},
   "data": {
     "name": "world",
@@ -22,7 +22,7 @@
         "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/countries_data.json",
         "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
       },
-      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+      "mark": {"type": "geoshape", "fill": null, "stroke": "white"}
     },
     {
       "transform": [
@@ -46,7 +46,7 @@
             "fields": ["CO2_Emission"]
           }
         },
-        {"calculate": "datum.CO2_Emission + 0.1", "as": "Emission (Tonnes)"}
+        {"calculate": "datum.CO2_Emission", "as": "Emission (Tonnes)"}
       ],
       "mark": {"type": "geoshape", "stroke": "lightgray", "tooltip": true},
       "encoding": {
@@ -54,8 +54,9 @@
           "field": "CO2_Emission",
           "type": "quantitative",
           "scale": {
-            "type": "linear",
-            "range": ["#ffffd4", "#fed98e", "#fe9929", "#d95f0e", "993404"]
+            "type": "threshold",
+            "domain": [20000000, 2000000000, 3000000000, 4000000000, 50000000000, 6000000000, 7000000000, 8000000000],
+            "range": ["#fff7ec", "#fee8c8", "#fdd49e", "#fdbb84", "#fc8d59", "#ef6548", "#d7301f", "#b30000", "#7f0000"]
           }
         },
         "tooltip": [
