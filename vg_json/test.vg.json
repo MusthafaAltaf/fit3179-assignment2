@@ -1,36 +1,54 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Global CO2 Emission in 2017",
-  "width": 800,
+  "width": 700,
   "height": 400,
   "projection": {"type": "equalEarth"},
-  "data": 
+  "data": {
+    "name": "world",
+    "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/countries_data.json",
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+  },
+  "layer": [
     {
-      "name": "world",
-      "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/countries_data.json",
-      "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      "data": {
+        "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/countries_data.json",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
     },
-  
-  "transform": [
     {
-      "lookup": "properties.NAME",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/2017_Co2_emission.csv"
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.NAME",
+          "as": "note"
+        }
+      ],
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+      "encoding": {"tooltip": {"field": "note"}}
+    },
+    {
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/2017_Co2_emission.csv"
+            },
+            "key": "Country",
+            "fields": ["CO2_Emission"]
+          }
         },
-        "key": "Country",
-        "fields": ["CO2_Emission"]
+        {"calculate": "datum.CO2_Emission + 0.1", "as": "Emission (Tonnes)"}
+      ],
+      "mark": {"type": "geoshape"},
+      "encoding": {
+        "color": {
+          "field": "CO2_Emission",
+          "type": "quantitative",
+          "scale": {"type": "linear"}
+        }
       }
-    },
-    {"calculate": "datum.CO2_Emission + 0.1", "as": "Emission (Tonnes)"}
-  ],
-    
-  "mark": {"type": "geoshape"},
-  "encoding": {
-    "color": {
-      "field": "CO2_Emission",
-      "type": "quantitative",
-      "scale": {"type": "linear"}
     }
-  }
+  ]
 }
