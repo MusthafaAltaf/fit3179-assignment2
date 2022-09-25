@@ -3,10 +3,10 @@
   "title": "Total amount of money won by country",
   "width": 800,
   "height": 400,
-  "projection": { "type": "equalEarth" },
+  "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/countries_data.json",
-    "format": { "type": "topojson", "feature": "ne_110m_admin_0_countries" }
+    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "transform": [
     {
@@ -15,24 +15,22 @@
         "data": {
           "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/Esport_Earnings_country_grouped.csv"
         },
-        "key": "Country",
-        "fields": ["Active"]
+        "key": "Top_Country",
+        "fields": ["Top_Country_Earnings"]
       }
     },
-    { "calculate": "datum.Active + 0.1", "as": "Active Cases" }
+    {"calculate": "datum.Top_Country_Earnings + 0.1", "as": "Earnings"}
   ],
-  "mark": { "type": "geoshape" },
+  "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Active Cases",
+      "field": "Earnings",
       "type": "quantitative",
       "scale": {
         "type": "threshold",
-        "domain": [0, 200000, 10000000],
+        "domain": [0, 10000, 100000, 1000000, 10000000, 100000000],
         "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
-        }
-        
+      }
     }
   }
 }
-
