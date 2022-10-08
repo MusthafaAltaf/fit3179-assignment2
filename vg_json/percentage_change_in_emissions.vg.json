@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Cumulative Change in CO2 Emission Since 1970",
+    "data": {
+      "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/world_co2_emission_excel.csv"
+    },
+    "transform": [
+    {
+      "calculate": "datum.cum_change_in_co2 * 100",
+      "as": "cumulativePercentageOfCO2Emission"
+    }],
+    "mark": {
+      "type": "line",
+      "point": {
+        "color": "grey"
+      },
+      "tooltip": true,
+      "color": "#b30000"
+    },
+    "encoding": {
+      "x": {"field": "year", "type": "nominal", "title": "Year"},
+      "y": {"field": "cumulativePercentageOfCO2Emission", "sort": "descending", "title": "Cumulative % Change in CO2", "axis": {"format": ".0f"}}
+    }
+  }
