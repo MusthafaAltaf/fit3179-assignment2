@@ -6,7 +6,7 @@
     },
     "transform": [
     {
-      "calculate": "datum.cum_change_in_co2 * 100",
+      "calculate": "datum.cum_change_in_co2_perc * 100",
       "as": "cumulativePercentageOfCO2Emission"
     }],
     "mark": {
@@ -19,6 +19,6 @@
     },
     "encoding": {
       "x": {"field": "year", "type": "nominal", "title": "Year"},
-      "y": {"field": "cumulativePercentageOfCO2Emission", "sort": "descending", "title": "Cumulative % Change in CO2", "axis": {"format": ".0f"}}
+      "y": {"field": "cumulativePercentageOfCO2Emission", "sort": "descending", "title": "Yearly Change in CO2", "axis": {"format": ".0f"}}
     }
   }

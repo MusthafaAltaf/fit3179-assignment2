@@ -16,11 +16,18 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
 
+      var vg_2 = "./vg_json/percentage_change_in_emissions.vg.json";
+      vegaEmbed("#linechart", vg_2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+
     </script>
     <title>Global CO2 Emission</title>
   </head>
   <body>
     <h1>Global CO2 Emission 2017</h1>
     <div id="map"></div>
+    <br>
+    <div id="linechart"></div>
   </body>
 </html>
