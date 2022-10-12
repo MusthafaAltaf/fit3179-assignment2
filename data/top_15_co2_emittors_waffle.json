@@ -1,0 +1,82 @@
+[
+ {
+   "Country": "United States",
+   "CO2_Emission_waffle": 399000000000,
+   "CO2_emission_waffle_perc": 25.25
+ },
+ {
+   "Country": "China",
+   "CO2_Emission_waffle": 200000000000,
+   "CO2_emission_waffle_perc": 12.66
+ },
+ {
+   "Country": "Russia",
+   "CO2_Emission_waffle": 101000000000,
+   "CO2_emission_waffle_perc": 6.39
+ },
+ {
+   "Country": "Germany",
+   "CO2_Emission_waffle": 90565630028,
+   "CO2_emission_waffle_perc": 5.73
+ },
+ {
+   "Country": "United Kingdom",
+   "CO2_Emission_waffle": 77071055648,
+   "CO2_emission_waffle_perc": 4.88
+ },
+ {
+   "Country": "Japan",
+   "CO2_Emission_waffle": 62304608199,
+   "CO2_emission_waffle_perc": 3.94
+ },
+ {
+   "Country": "Middle East",
+   "CO2_Emission_waffle": 60473230861,
+   "CO2_emission_waffle_perc": 3.83
+ },
+ {
+   "Country": "India",
+   "CO2_Emission_waffle": 48557863281,
+   "CO2_emission_waffle_perc": 3.07
+ },
+ {
+   "Country": "Africa",
+   "CO2_Emission_waffle": 43117573841,
+   "CO2_emission_waffle_perc": 2.73
+ },
+ {
+   "Country": "France",
+   "CO2_Emission_waffle": 37768075471,
+   "CO2_emission_waffle_perc": 2.39
+ },
+ {
+   "Country": "Canada",
+   "CO2_Emission_waffle": 31913521876,
+   "CO2_emission_waffle_perc": 2.02
+ },
+ {
+   "Country": "Poland",
+   "CO2_Emission_waffle": 26848816401,
+   "CO2_emission_waffle_perc": 1.7
+ },
+ {
+   "Country": "Ukraine",
+   "CO2_Emission_waffle": 25796386297,
+   "CO2_emission_waffle_perc": 1.63
+ },
+ {
+   "Country": "Italy",
+   "CO2_Emission_waffle": 23645999964,
+   "CO2_emission_waffle_perc": 1.5
+ },
+ {
+   "Country": "South Africa",
+   "CO2_Emission_waffle": 19787369762,
+   "CO2_emission_waffle_perc": 1.25
+ },
+ {
+   "Country": "Other",
+   "CO2_Emission_waffle": 332000000000,
+   "CO2_emission_waffle_perc": 21.03
+ }
+]

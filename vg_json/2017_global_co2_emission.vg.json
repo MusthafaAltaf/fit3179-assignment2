@@ -1,15 +1,27 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Global CO2 Emission in 2017",
-  "width": 1200,
-  "height": 600,
-  "projection": {"type": "equalEarth"},
+  "title": "Global CO2 Emission Per Capita",
+  "width": 750,
+  "height": 400,
   "data": {
-    "name": "world",
-    "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/countries_data.json",
-    "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+    "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/2017_Co2_emission.csv"
   },
+  "projection": {"type": "equalEarth"},
   "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/countries_data.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.NAME",
+          "as": "note"
+        }
+      ],
+      "mark": {"type": "geoshape", "fill": "white", "stroke": "lightgray"},
+      "encoding": {"tooltip": {"field": "note"}}
+    },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/oceans.topojson.json",
@@ -27,41 +39,46 @@
     {
       "transform": [
         {
-          "calculate": "'Data is not available in ' + datum.properties.NAME",
-          "as": "note"
-        }
-      ],
-      "mark": {"type": "geoshape", "fill": "white", "stroke": "lightgray"},
-      "encoding": {"tooltip": {"field": "note"}}
-    },
-    {
-      "transform": [
-        {
-          "lookup": "properties.NAME",
+          "lookup": "Country",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/2017_Co2_emission.csv"
+              "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/vg_json/countries_data.json",
+              "format": {
+                "type": "topojson",
+                "feature": "ne_110m_admin_0_countries"
+              }
             },
-            "key": "Country",
-            "fields": ["CO2_Emission"]
+            "key": "properties.NAME",
+            "fields": ["properties", "type", "geometry"]
           }
         },
-        {"calculate": "datum.CO2_Emission", "as": "Emission (Tonnes)"}
+        {"filter": "datum.year == Year_selection"}
       ],
       "mark": {"type": "geoshape", "stroke": "lightgray", "tooltip": true},
       "encoding": {
         "color": {
           "field": "CO2_Emission",
           "type": "quantitative",
-          "scale": {
-            "type": "log",
-            "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]
-          }
+          "scale": {"scheme": "reds"},
+          "legend": {"format": ".2s"}
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},
           {"field": "CO2_Emission", "type": "quantitative"}
         ]
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2000,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2011,
+        "step": 1,
+        "name": "year: "
       }
     }
   ]
