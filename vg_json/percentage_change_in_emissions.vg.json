@@ -7,7 +7,7 @@
     },
     "transform": [
     {
-      "calculate": "datum.cum_change_in_co2_perc * 100",
+      "calculate": "datum.perc_change_in_co2_perc * 100",
       "as": "cumulativePercentageOfCO2Emission"
     }],
     "mark": {

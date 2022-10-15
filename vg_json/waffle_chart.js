@@ -27,7 +27,7 @@ var data = top_15_co2_emittors_waffle_json
 // ];
 //Waffle chart settings 
 var heatmapEmptyCellsColor = '#EEEEEE',
-    heatmapCellsColor = '#D1C4E9',
+    heatmapCellsColor = '#fc5858',
     labelTextSettings =
         'width:120px;align:center; verticalAlign:middle;font-weight:bold;color:#212121;';
 
@@ -74,7 +74,7 @@ function WaffleChart(data, div) {
 WaffleChart(data, 'chart');
 
 function generatePoints(value) {
-    var heatmapData = Array(100)
+    var heatmapData = Array(50)
         .fill(-1)
         .fill(1, 0, Math.round(value));
     heatmapData = heatmapData.reduce(function (
