@@ -2,6 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Cumulative Change in CO2 Emission Since 1970",
     "title": "Cumulative Change in CO2 Emission Since 2000",
+    "width": 400,
+    "height": 200,
     "data": {
       "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/world_co2_emission_excel.csv"
     },

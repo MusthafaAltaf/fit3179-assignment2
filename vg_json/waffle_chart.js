@@ -6,25 +6,6 @@ import top_15_co2_emittors_waffle_json from '../data/top_15_co2_emittors_waffle.
 var data = top_15_co2_emittors_waffle_json
 
 
-// var data = [
-//     { type: 'White Alone', value: 250139096 },
-//     { type: 'Black Alone', value: 43804319 },
-//     {
-//         type:
-//             'American Indian or Alaska Native Alone',
-//         value: 4147521
-//     },
-//     { type: 'Asian Alone', value: 19330600 },
-//     {
-//         type:
-//             'Hawaiian and Other Pacific Islander Alone',
-//         value: 799418
-//     },
-//     {
-//         type: 'Two or More Race Groups',
-//         value: 8946480
-//     }
-// ];
 //Waffle chart settings 
 var heatmapEmptyCellsColor = '#EEEEEE',
     heatmapCellsColor = '#fc5858',

@@ -1,4 +1,22 @@
-body {
+.main{
     background: #E4E4E9;
-    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.main_title{
+    margin: 20px;
+}
+
+.main_map {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.main_map_left {
+    margin-bottom: 30;
+    margin-top: 30px;
+    margin-left: 10px;
 }
