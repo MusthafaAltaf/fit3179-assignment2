@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Global CO2 Emission Per Capita",
-  "width": 800,
-  "height": 500,
+  "width": 750,
+  "height": 370,
   "data": {
     "url": "https://raw.githubusercontent.com/MusthafaAltaf/fit3179-assignment2/main/data/2017_Co2_emission.csv"
   },
@@ -59,12 +59,13 @@
         "color": {
           "field": "CO2_Emission",
           "type": "quantitative",
+          "title": "CO2 Emission",
           "scale": {"scheme": "reds"},
           "legend": {"format": ".2s"}
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-          {"field": "CO2_Emission", "type": "quantitative"}
+          {"field": "CO2_Emission", "type": "quantitative", "title": "CO2 Emission"}
         ]
       }
     }
@@ -76,7 +77,7 @@
       "bind": {
         "input": "range",
         "min": 2000,
-        "max": 2011,
+        "max": 2017,
         "step": 1,
         "name": "year: "
       }

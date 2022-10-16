@@ -1,5 +1,5 @@
 #waffleWrapper{
-    max-width:1000px;
+    max-width:1200px;
     margin: 0px auto;
     justify-content:space-around;
     display:flex;
@@ -13,4 +13,8 @@
     width:100%;
     color:#212121;
 }
-.chart{ width: 240px;   height: 220px;}
+.chart{ 
+    width: 240px;
+    height: 220px;
+    margin: 15px;
+}

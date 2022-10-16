@@ -1,7 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Cumulative Change in CO2 Emission Since 1970",
-    "title": "Cumulative Change in CO2 Emission Since 2000",
+    "title": "Yearly global change in CO2 Emission",
     "width": 400,
     "height": 200,
     "data": {
