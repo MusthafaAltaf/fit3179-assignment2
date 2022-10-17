@@ -29,6 +29,6 @@
         "value": 0
       },
       "x": {"field": "year", "type": "nominal", "title": "Year"},
-      "y": {"field": "cumulativePercentageOfCO2Emission", "sort": "descending", "title": "Yearly Change in CO2", "axis": {"format": ".0f"}}
+      "y": {"field": "cumulativePercentageOfCO2Emission", "sort": "descending", "title": "Yearly Change in CO2 (%)", "axis": {"format": ".0f"}}
     }
   }

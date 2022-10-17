@@ -17,16 +17,16 @@
 }
 
 .main_map_left {
-    margin-bottom: 30;
-    margin-top: 30px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .wafflechart_title {
     text-align: center;
     font-size: 20px;
-    font-family:tahoma, geneva, sans-serif; 
+    font-family: Arial, Helvetica; 
     font-weight:bold; 
 }
 
@@ -45,6 +45,7 @@
     border-radius: 10px;
     margin: 25px;
     background-color: #fee0d2;
+    text-align: center;
 }
 
 .total_co2_emission_text {
