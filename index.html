@@ -37,24 +37,44 @@
   <body>
     <div class="main">
       <div class="main_title">
-        <h1>Global CO2 Emission 2017</h1>
+        <h1>Global CO2 Emission</h1>
       </div>
       <div class="main_map">
         <div class="main_map_left">
-          <p>The chart below shows the yearly change in global CO2 emission between the years 2000 to 2017.</p>
-          <h2>World CO2 Emissions in 2017: 1,580,000,000,000 tonnes</h2>
+          <p>
+            The chart below shows the yearly change in <a class="theme_text">global CO2 emission</a>
+            between the years <a class="theme_text">2000 to 2017</a>.
+          </p>
+          <div class="total_co2_emission">
+            <p class="total_co2_emission_text">
+              Total CO2 emitted in 2017:
+            </p>
+            <p class="total_co2_emission_number">
+              1,580,000,000,000 tonnes
+            </p>
+          </div>
           <div id="linechart"></div>
         </div>
         <div class="main_map_right">
-          <p>The map below shows the global CO2 emission per capita for each country. The data shown below spans from the year 2000 to 2017. During each year, we can see the amount of CO2 being emitted and how it varies from year to year</p>
+          <p>
+            The map below shows the global <a class="theme_text">CO2 emission per capita</a> for each
+            <a class="theme_text">country</a>. The data shown below spans from the year <a class="theme_text">2000 to 2017</a>.
+            During each year, we can see the amount of <a class="theme_text">CO2 emitted</a> and how
+            it varies from year to year
+          </p>
           <div id="map"></div>
         </div>
       </div>
 
       <br />
       <div class="wafflechart">
-        <p class="wafflechart_title" style="font-size: 16px">CO2 Emission of Top 15 countries</p>
-        <p class="wafflechart_description">The charts below show the top 15 countries which emitted the most amount of CO2 (Tonnes) in the world in 2017.</p>
+        <p class="wafflechart_title">
+          CO2 Emission of Top 15 countries
+        </p>
+        <p class="wafflechart_description">
+          The charts below show the <a class="theme_text">top 15 countries</a> which emitted the most
+          amount of <a class="theme_text">CO2 (Tonnes)</a> in the world in <a class="theme_text">2017</a>.
+        </p>
       </div>
       <div id="waffleWrapper">
         <div id="chart1" class="chart"></div>
@@ -74,6 +94,7 @@
         <div id="chart15" class="chart"></div>
         <div id="chart16" class="chart"></div>
       </div>
+      <div class="footer">A visualisation by Musthafa Altaf</div>
     </div>
     <script type="module" src="./vg_json/waffle_chart.js"></script>
     <script type="text/javascript" src="./vg_json/treemap.js"></script>

@@ -8,7 +8,7 @@ var data = top_15_co2_emittors_waffle_json
 
 //Waffle chart settings 
 var heatmapEmptyCellsColor = '#EEEEEE',
-    heatmapCellsColor = '#fc5858',
+    heatmapCellsColor = '#fb6a4a',
     labelTextSettings =
         'width:120px;align:center; verticalAlign:middle;font-weight:bold;color:#212121;';
 

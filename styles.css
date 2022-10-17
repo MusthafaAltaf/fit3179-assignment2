@@ -1,8 +1,9 @@
 .main{
-    background: #E4E4E9;
+    background: #deebf7;
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 10px;
+    font-family: Magra, sans-serif;
 }
 
 .main_title{
@@ -18,11 +19,13 @@
 .main_map_left {
     margin-bottom: 30;
     margin-top: 30px;
-    margin-left: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .wafflechart_title {
     text-align: center;
+    font-size: 20px;
     font-family:tahoma, geneva, sans-serif; 
     font-weight:bold; 
 }
@@ -30,4 +33,34 @@
 .wafflechart_description {
     margin: 25px;
     text-align: left;
+}
+
+.theme_text {
+    font-weight: bold;
+    color: #a50f15;
+}
+
+.total_co2_emission {
+    border: 3px solid grey;
+    border-radius: 10px;
+    margin: 25px;
+    background-color: #fee0d2;
+}
+
+.total_co2_emission_text {
+    font-size: 20px;
+    margin: 25px;
+}
+
+.total_co2_emission_number {
+    font-size: 45px;
+    font-weight: bold;
+    color: #a50f15;
+    margin: 25px;
+}
+
+.footer {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
 }
